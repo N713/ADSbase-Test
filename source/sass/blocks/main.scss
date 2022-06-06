@@ -1,3 +1,19 @@
 .main {
-    @include flex(flex-start, space-between);
+  @include flex(flex-start, space-between);
+
+  padding-top: 95px + $gap;
+}
+
+@media(max-width: $firstPoint) {
+  .main {
+    flex-wrap: wrap;
+    padding-top: 85px;
+  }
+}
+
+@media(max-width: $secondPoint) {
+  .main {
+    flex-direction: column;
+    padding-top: 70px;
+  }
 }

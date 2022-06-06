@@ -1,0 +1,8 @@
+.fixed {
+    width: 100%;
+    position: fixed;
+    padding-right: 40px;
+    box-sizing: border-box;
+    max-width: $maxWidth;
+    z-index: 1000;
+}

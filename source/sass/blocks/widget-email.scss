@@ -1,32 +1,70 @@
 .widget-email {
-    padding: $gap;
+  padding: $gap;
 
-    h2 {
-        margin: $gap 0;
-        text-align: center;
-    }
+  h2 {
+    margin: $gap 0;
+    text-align: center;
+  }
 
-    input, button {
-        display: block;
-    }
+  input, button {
+    display: block;
+  }
+
+  input {
+    width: 100%;
+    padding: $gap / 2;
+    padding-left: 40px;
+    box-sizing: border-box;
+    border-radius: $radius;
+    border: 2px solid $green;
+    margin-bottom: $gap;
+    background-color: $active;
+    background-image: url('../../img/icon-mail.svg');
+    background-size: 30px 20px;
+    background-repeat: no-repeat;
+    background-position: 2.5% 50%;
+    color: $color;
+  }
+  
+  ::placeholder {
+    color: $color;
+  }
+
+  button {
+    width: 100%;
+    max-width: 175px;
+    padding: $gap / 2;
+    background-color: $green;
+    color: $color;
+    border: 2px solid $green;
+    text-transform: uppercase;
+    margin: 0 auto;
+    border-radius: $radius;
+  }
+
+  button:hover,
+  button:focus {
+    cursor: pointer;
+    transition: all 0.4s;
+    background-color: transparent;
+  }
+}
+
+@media(max-width: $firstPoint) {
+  .widget-email {
+    width: 100%;
 
     input {
-        width: 100%;
-        padding: $gap / 2;
-        padding-left: 40px;
-        box-sizing: border-box;
-        border-radius: $radius;
-        border: 2px solid $green;
-        margin-bottom: $gap;
-        background-color: $active;
-        background-image: url('../../img/icon-mail.svg');
-        background-size: 30px 20px;
-        background-repeat: no-repeat;
-        background-position: 2.5% 50%;
-        color: $color;
+      background-position: 5px 50%;
     }
-    
-    ::placeholder {
-       color: $color;
-    }
+  }
+}
+
+@media(max-width: $secondPoint) {
+  .widget-email {
+    width: 100%;
+    margin-right: 0;
+    margin: 0 auto $gap auto;
+    box-sizing: border-box;
+  }
 }

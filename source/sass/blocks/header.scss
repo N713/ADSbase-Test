@@ -121,3 +121,61 @@
     }
   }
 }
+
+@media(max-width: $firstPoint) {
+  .header {
+    li {
+      a {
+        padding: 20px $gap / 2;
+        font-size: 14px;
+
+        span[data-number]::after {
+          top: -15px;
+          right: -15px;
+          width: 20px;
+          height: 20px;
+        }
+      }
+
+      svg {
+        margin-right: $gap / 2;
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+}
+
+@media(max-width: $secondPoint) {
+  .header {
+    li {
+      a {
+        padding: 15px 5px;
+        font-size: 10px;
+
+        span[data-number]::after {
+          top: -13px;
+          right: 13px;
+          width: 15px;
+          height: 15px;
+        }
+      }
+
+      svg {
+       display: none;
+      }
+    }
+
+    &__login {
+      li {
+        padding: 0 5px;
+
+        a {
+          &::after {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
