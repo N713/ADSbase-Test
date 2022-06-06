@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="En">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="Description" content="Test Page">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="preload" href="fonts/robotoregular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/robotomedium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/robotobold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Joan&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.min.css">
+  <script>
+    document.createElement("picture");
+    //По руководству автора - http://scottjehl.github.io/picturefill/
+  </script>
+  <title>Test</title>
+</head>
+<!--
+  <svg width="20" height="22" viewBox="0 0 20 22">
+    <use xlink:href="img/sprite.svg#icon-login"></use>
+  </svg>
+-->
+<!--
+  <picture>
+    <source type="image/webp"
+            srcset="img/black-card@1x.webp 1x, img/black-card@2x.webp 2x">
+
+    <img src="img/black-card@1x.png"
+          srcset="img/black-card@2x.png 2x"
+          width="335" height="228" alt="Дебетовая карта. Черная">
+  </picture>
+-->
+
+<body class="body">
+  <div class="wrapper">
+    <h1 class="visually-hidden">Test</h1>
+    <header class="header">
+      <nav class="header__navigation">
+        <ul>
+          <li>
+            <a href="#">
+              <svg width="30" height="30" viewBox="0 0 30 30">
+                <use xlink:href="img/sprite.svg#icon-gear"></use>
+              </svg>
+              <span href="#">Settings</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <svg width="30" height="30" viewBox="0 0 30 30">
+                <use xlink:href="img/sprite.svg#icon-user"></use>
+              </svg>
+              <span href="#">Account</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <svg width="30" height="30" viewBox="0 0 30 30">
+                <use xlink:href="img/sprite.svg#icon-mail"></use>
+              </svg>
+              <span href="#">Messages</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <svg width="30" height="30" viewBox="0 0 30 30">
+                <use xlink:href="img/sprite.svg#icon-star"></use>
+              </svg>
+              <span href="#">Favorites</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <ul class="header__login">
+        <li>
+          <a href="#">Me</a>
+          <img src="img/Anne.jpeg" alt="Avatar">
+        </li>
+      </ul>
+    </header>
+    <main class="main">
+      <div class="widget widget-menu">
+        <h2>Menu Box</h2>
+        <ul>
+          <li>
+            <svg width="30" height="30" viewBox="0 0 30 30">
+              <use xlink:href="img/sprite.svg#icon-mail"></use>
+            </svg>
+            <a href="#">Messages</a>
+          </li>
+          <li>
+            <svg width="30" height="30" viewBox="0 0 30 30">
+              <use xlink:href="img/sprite.svg#icon-paperplane"></use>
+            </svg>
+            <a href="#">Invites</a>
+          </li>
+          <li>
+            <svg width="30" height="30" viewBox="0 0 30 30">
+              <use xlink:href="img/sprite.svg#icon-calendar"></use>
+            </svg>
+            <a href="#">Events</a>
+          </li>
+          <li>
+            <svg width="30" height="30" viewBox="0 0 30 30">
+              <use xlink:href="img/sprite.svg#icon-gear"></use>
+            </svg>
+            <a href="#">Account Settings</a>
+          </li>
+          <li>
+            <svg width="30" height="30" viewBox="0 0 30 30">
+              <use xlink:href="img/sprite.svg#icon-stat"></use>
+            </svg>
+            <a href="#">Statistics</a>
+          </li>
+        </ul>
+      </div>
+      <div class="widget widget-person">
+        <img src="img/Anne.jpeg" alt="Person">
+        <h2>Anne Hathaway</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing</p>
+        <ul class="widget__stats">
+          <li>
+            <span>23</span>
+          </li>
+          <li>
+            <span>841</span>
+          </li>
+          <li>
+            <span>49</span>
+          </li>
+        </ul>
+      </div>
+      <div class="widget widget-email">
+        <h2>Join The Newsletter</h2>
+        <input type="email" placeholder="youtname@gmail.com" name="email" id="email">
+        <label for="email" class="visually-hidden">Email</label>
+        <button type="button">Subscribe</button>
+      </div>
+    </main>
+    <script src="js/vendor.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

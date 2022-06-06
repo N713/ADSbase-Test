@@ -1,0 +1,25 @@
+.header {
+    @include flex(center, space-between);
+
+    background-color: $contentBack;
+    border-radius: $radius;
+    margin-bottom: $gap;
+
+    ul {
+        @include flex(center, flex-start);
+    }
+
+    li {
+        @include flex(center, center);
+
+        svg {
+            margin-right: $gap;
+        }
+
+        a {
+            @include flex(center, center);
+
+            padding: 30px $gap;
+        }
+    }
+}

@@ -1,0 +1,40 @@
+html {
+  padding-top: 40px;
+}
+
+.body {
+  font-family: $joan;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: $color;
+  background-color: $mainBack;
+
+  @include reset;
+
+  h1, h2, h3, h4, h5, h6 {
+    @include reset;
+
+    font-family: $roboto;
+  }
+
+  ul, p {
+    @include reset;
+  }
+
+  ul {
+    li {
+      list-style: none;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: $color;
+  }
+
+  svg {
+    fill: $fill;
+  }
+}
