@@ -1,0 +1,32 @@
+.widget-email {
+    padding: $gap;
+
+    h2 {
+        margin: $gap 0;
+        text-align: center;
+    }
+
+    input, button {
+        display: block;
+    }
+
+    input {
+        width: 100%;
+        padding: $gap / 2;
+        padding-left: 40px;
+        box-sizing: border-box;
+        border-radius: $radius;
+        border: 2px solid $green;
+        margin-bottom: $gap;
+        background-color: $active;
+        background-image: url('../../img/icon-mail.svg');
+        background-size: 30px 20px;
+        background-repeat: no-repeat;
+        background-position: 2.5% 50%;
+        color: $color;
+    }
+    
+    ::placeholder {
+       color: $color;
+    }
+}

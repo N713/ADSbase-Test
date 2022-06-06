@@ -1,0 +1,77 @@
+.widget-menu {
+  h2 {
+    padding: $gap;
+    background-color: $green;
+    border-radius: $radius $radius 0 0;
+  }
+
+  a {
+    @include flex(center, flex-start);
+
+    padding: $gap;
+
+    svg {
+      margin-right: $gap;
+    }
+  }
+
+  a:hover,
+  a:focus {
+    cursor: pointer;
+
+    span, svg {
+      transition: all 0.4s;
+    }
+
+    span {
+      color: $green;
+    }
+
+    svg {
+      fill: $green;
+    }
+  }
+
+  a.active {
+    background-color: $active;
+
+    svg {
+      fill: $color;
+    }
+  }
+
+  a.active:hover,
+  a.active:focus {
+    cursor: auto;
+
+    span {
+      color: $color;
+    }
+
+    svg {
+      fill: $color;
+    }
+  }
+
+  a[data-number] {
+    position: relative;
+
+    &::after {
+      content: attr(data-number);
+      display: inline-block;
+      position: absolute;
+      min-width: 35px;
+      border-radius: 20px;
+      background-color: $active;
+      text-align: center;
+      padding: 2px;
+      right: 10px;
+    }
+  }
+
+  a.active[data-number] {
+    &::after {
+      background-color: $red;
+    }
+  }
+}

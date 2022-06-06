@@ -1,25 +1,123 @@
 .header {
-    @include flex(center, space-between);
+  @include flex(center, space-between);
 
-    background-color: $contentBack;
-    border-radius: $radius;
-    margin-bottom: $gap;
+  background-color: $contentBack;
+  border-radius: $radius;
+  margin-bottom: $gap;
 
-    ul {
-        @include flex(center, flex-start);
+  ul {
+    @include flex(center, flex-start);
+  }
+
+  li {
+    @include flex(center, center);
+
+    svg {
+      margin-right: $gap;
     }
 
+    a {
+      @include flex(center, center);
+
+      padding: 30px $gap;
+      position: relative;
+    }
+
+    a.active {
+      background-color: $active;
+      border-bottom: 5px solid $green;
+    }
+
+    a:hover,
+    a:focus {
+      cursor: pointer;
+
+      span {
+        color: $green;
+        transition: all 0.4s;
+      }
+
+      svg {
+        transition: all 0.4s;
+        fill: $green;
+      }
+    }
+
+    a.active:hover,
+    a.active:focus {
+      cursor: auto;
+
+      span {
+        color: $color;
+      }
+
+      svg {
+        fill: $fill;
+      }
+    }
+  }
+
+  a {
+    span[data-number] {
+      position: relative;
+
+      &::after {
+        content: attr(data-number);
+        position: absolute;
+        display: inline-block;
+        text-align: center;
+        line-height: 1;
+        width: 25px;
+        height: 25px;
+        border-radius: 100%;
+        background-color: $red;
+        color: $color;
+        top: -25px;
+      }
+    }
+  }
+
+  &__login {
     li {
-        @include flex(center, center);
+      padding: 0 $gap;
 
-        svg {
-            margin-right: $gap;
+      a {
+        padding: 0 $gap;
+        position: relative;
+
+        &::after {
+          content: '';
+          display: inline-block;
+          width: 6px;
+          height: 6px;
+          border-right: 2px solid $fill;
+          border-bottom: 2px solid $fill;
+          margin-left: 20px;
+          transform: rotate(45deg);
         }
+      }
 
-        a {
-            @include flex(center, center);
-
-            padding: 30px $gap;
+      a:hover,
+      a:focus {
+        cursor: pointer;
+          color: $green;
+          transition: all 0.4s;
         }
+      }
+
+      a:hover::after,
+      a:focus::after {
+        transition: all 0.4s;
+        border-right: 2px solid $green;
+        border-bottom: 2px solid $green;
+      }
+
+    img {
+      display: inline-block;
+      width: 45px;
+      height: auto;
+      border-radius: 100%;
+      border: 2px solid $fill;
     }
+  }
 }
